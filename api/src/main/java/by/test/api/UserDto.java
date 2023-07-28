@@ -13,5 +13,5 @@ public class UserDto {
     private Long id;
     private String fio;
     private String email;
-    private RoleDto role;
+    private String role;
 }

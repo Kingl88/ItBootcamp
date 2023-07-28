@@ -22,6 +22,11 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
+    public RoleDto findByName(String name) {
+        return roleMapper.mapToDto(roleRepository.findByName(name));
+    }
+
+    @Override
     public RoleDto save(RoleDto roleDto) {
         return roleMapper.mapToDto(roleRepository.save(roleMapper.mapFromDto(roleDto)));
     }
