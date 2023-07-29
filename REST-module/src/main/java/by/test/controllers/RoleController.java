@@ -1,6 +1,6 @@
 package by.test.controllers;
 
-import by.test.api.RoleDto;
+import by.test.api.dtoEntities.RoleDto;
 import by.test.service.services.interfaces.RoleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

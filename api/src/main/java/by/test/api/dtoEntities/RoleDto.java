@@ -1,4 +1,4 @@
-package by.test.api;
+package by.test.api.dtoEntities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto {
+public class RoleDto {
     private Long id;
-    private String fio;
-    private String email;
-    private String role;
+    private String name;
 }
