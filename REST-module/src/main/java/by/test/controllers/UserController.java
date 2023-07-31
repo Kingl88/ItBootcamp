@@ -3,9 +3,9 @@ package by.test.controllers;
 import by.test.api.dtoEntities.UserDtoSave;
 import by.test.api.dtoEntities.UserDtoView;
 import by.test.api.exceptions.DataValidationException;
+import by.test.api.dtoEntities.PageDto;
 import by.test.service.services.interfaces.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
@@ -20,7 +20,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping
-    public Page<UserDtoView> findAll(@RequestParam(name = "page", defaultValue = "1") int pageIndex) {
+    public PageDto<UserDtoView> findAll(@RequestParam(name = "page", defaultValue = "1") int pageIndex) {
         if (pageIndex < 1) {
             pageIndex = 1;
         }

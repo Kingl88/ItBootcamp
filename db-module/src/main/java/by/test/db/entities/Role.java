@@ -1,6 +1,7 @@
 package by.test.db.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -21,4 +22,7 @@ public class Role {
     @OneToMany(mappedBy = "role")
     private List<User> users;
 
+    public Role(String name) {
+        this.name = name;
+    }
 }

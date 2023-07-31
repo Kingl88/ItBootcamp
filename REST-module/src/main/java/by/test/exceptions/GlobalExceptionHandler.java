@@ -11,6 +11,6 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler
     private ResponseEntity<?> catchDataValidationException(DataValidationException e) {
-        return new ResponseEntity<>(e.getMessages(), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(e, HttpStatus.BAD_REQUEST);
     }
 }

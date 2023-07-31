@@ -1,9 +1,12 @@
 package by.test.api.exceptions;
 
-import java.util.List;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+import java.util.List;
+@NoArgsConstructor
 public class DataValidationException extends RuntimeException {
-    private final List<String> messages;
+    private List<String> messages;
 
     public List<String> getMessages() {
         return messages;

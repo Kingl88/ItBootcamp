@@ -2,10 +2,10 @@ package by.test.service.services.interfaces;
 
 import by.test.api.dtoEntities.UserDtoSave;
 import by.test.api.dtoEntities.UserDtoView;
-import org.springframework.data.domain.Page;
+import by.test.api.dtoEntities.PageDto;
 
 public interface UserService {
-    Page<UserDtoView> findAllSortByEmail(int pageIndex, int pageSize);
+    PageDto<UserDtoView> findAllSortByEmail(int pageIndex, int pageSize);
 
     UserDtoView save(UserDtoSave userDto);
 }

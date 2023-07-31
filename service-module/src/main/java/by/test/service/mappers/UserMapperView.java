@@ -13,7 +13,7 @@ public abstract class UserMapperView {
     @Autowired
     protected RoleService roleService;
 
-    @Mapping(target = "fio", expression = "java(new StringBuilder(entity.getName()).append(' ').append(entity.getLastname()).append(' ').append(entity.getSurname()).toString())")
+    @Mapping(target = "fio", expression = "java(new StringBuilder(entity.getSurname()).append(' ').append(entity.getName()).append(' ').append(entity.getLastname()).toString())")
     @Mapping(target = "role", source = "role.name")
     public abstract UserDtoView mapToDto(User entity);
 
