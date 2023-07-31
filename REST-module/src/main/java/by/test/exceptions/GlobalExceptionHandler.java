@@ -11,6 +11,10 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler
     private ResponseEntity<?> catchDataValidationException(DataValidationException e) {
-        return new ResponseEntity<>(e, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(e.getMessages(), HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler
+    private ResponseEntity<?> catchIllegalArgumentException(IllegalArgumentException e) {
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 }

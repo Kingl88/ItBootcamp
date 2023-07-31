@@ -20,11 +20,11 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping
-    public PageDto<UserDtoView> findAll(@RequestParam(name = "page", defaultValue = "1") int pageIndex) {
+    public PageDto<UserDtoView> findAll(@RequestParam(name = "page", defaultValue = "1") int pageIndex, @RequestParam(name = "pageSize", defaultValue = "1") int pageSize) {
         if (pageIndex < 1) {
             pageIndex = 1;
         }
-        return userService.findAllSortByEmail(pageIndex - 1, 10);
+        return userService.findAllSortByEmail(pageIndex - 1, pageSize);
     }
 
     @PostMapping
