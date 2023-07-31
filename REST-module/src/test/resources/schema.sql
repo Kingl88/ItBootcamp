@@ -1,3 +1,24 @@
+drop table if exists users cascade;
+drop table if exists roles cascade;
+
+create table roles
+(
+    id         bigint not null auto_increment,
+    name       varchar(20),
+    primary key (id)
+)engine=InnoDB;
+
+create table users
+(
+    id         bigint      not null auto_increment,
+    name       varchar(20) not null,
+    lastname   varchar(40) not null,
+    surname    varchar(40) not null,
+    email      varchar(50) not null,
+    role_id    bigint,
+    primary key (id)
+)engine=InnoDB;
+
 insert into users(name, lastname, surname, email, role_id)
 values ('Александр', 'Иванович', 'Иванов', 'alex@mail.nt', 1),
        ('Михаил', 'Петрович', 'Петров', 'miha@mail.nt', 2),
