@@ -24,6 +24,6 @@
 - git clone https://github.com/Kingl88/ItBootcamp.git;
 - cd ItBootcamp;
 - .\mvnw.cmd clean package;
-- java -jar REST-module\target\REST-module-0.0.1-SNAPSHOT.jar.
+- java -jar REST-module\target\REST-module-1.0-SNAPSHOT.jar.
 
 После запуска сервиса при переходе по ссылке http://localhost:8089/swagger-ui/index.html можно ознакомиться с документацией сконфигурированной **_Swagger_**.
