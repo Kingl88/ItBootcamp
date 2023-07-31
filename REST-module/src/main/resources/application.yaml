@@ -15,5 +15,5 @@ spring:
   docker:
     compose:
       skip:
-        in-tests: true
+        in-tests: false
       file: ./REST-module/compose.yaml
