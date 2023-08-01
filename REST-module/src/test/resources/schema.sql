@@ -3,21 +3,21 @@ drop table if exists roles cascade;
 
 create table roles
 (
-    id         bigint not null auto_increment,
-    name       varchar(20),
+    id   bigint not null auto_increment,
+    name varchar(20),
     primary key (id)
-)engine=InnoDB;
+) engine = InnoDB;
 
 create table users
 (
-    id         bigint      not null auto_increment,
-    name       varchar(20) not null,
-    lastname   varchar(40) not null,
-    surname    varchar(40) not null,
-    email      varchar(50) not null,
-    role_id    bigint,
+    id       bigint      not null auto_increment,
+    name     varchar(20) not null,
+    lastname varchar(40) not null,
+    surname  varchar(40) not null,
+    email    varchar(50) not null,
+    role_id  bigint,
     primary key (id)
-)engine=InnoDB;
+) engine = InnoDB;
 
 insert into users(name, lastname, surname, email, role_id)
 values ('Александр', 'Иванович', 'Иванов', 'alex@mail.nt', 1),

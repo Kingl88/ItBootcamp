@@ -13,6 +13,7 @@ public class GlobalExceptionHandler {
     private ResponseEntity<?> catchDataValidationException(DataValidationException e) {
         return new ResponseEntity<>(e.getMessages(), HttpStatus.BAD_REQUEST);
     }
+
     @ExceptionHandler
     private ResponseEntity<?> catchIllegalArgumentException(IllegalArgumentException e) {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
