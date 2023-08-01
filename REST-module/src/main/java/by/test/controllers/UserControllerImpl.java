@@ -4,6 +4,7 @@ import by.test.api.dtoEntities.UserDtoSave;
 import by.test.api.dtoEntities.UserDtoView;
 import by.test.api.exceptions.DataValidationException;
 import by.test.api.dtoEntities.PageDto;
+import by.test.controllers.interfaces.UserController;
 import by.test.service.services.interfaces.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.validation.BindingResult;
@@ -16,7 +17,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/v1/users")
 @RequiredArgsConstructor
-public class UserController {
+public class UserControllerImpl implements UserController {
     private final UserService userService;
 
     @GetMapping
